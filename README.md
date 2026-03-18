@@ -1,16 +1,63 @@
-# React + Vite
+# Job Listings Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple Job Listings web application built using React and Vite. It renders a clean dashboard of various job postings using reusable React components.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The main functionality of this project is to display a list of job opportunities. It maps over an array of job data and renders each job using a custom `Card` component. 
 
-## React Compiler
+Features displayed on each job card include:
+- **Brand Logo:** The logo of the hiring company.
+- **Company Name:** Google, Amazon, Meta, Apple, etc.
+- **Date Posted:** How long ago the job was posted.
+- **Job Title:** Frontend Developer, UI/UX Designer, React Developer, etc.
+- **Job Tags:** Tags indicating the type of job (e.g., Full Time, Part Time) and experience level (e.g., Junior, Mid, Senior).
+- **Pay Rate:** Hourly compensation details.
+- **Location:** The geographic location of the job, including remote options.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technology Stack
 
-## Expanding the ESLint configuration
+- **React (`^19.2.0`)**: Used for building the user interface with functional components and hooks.
+- **Vite (`^7.3.1`)**: A fast frontend build tool providing an extremely fast development environment.
+- **Vanilla CSS**: Used for styling the application elements.
+- **React Icons (`^5.5.0`)**: Used for rendering sleek vector icons within the application UI.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+Follow these steps to run the application on your local machine:
+
+### Prerequisites
+
+You need to have Node.js and npm (or another package manager like yarn/pnpm) installed.
+
+### Installation
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Open your browser and navigate to the local URL provided by Vite (typically `http://localhost:5173`).
+
+### Building for Production
+
+To create a production build of the project, run:
+```bash
+npm run build
+```
+This will compile and minify the application into the `dist` folder. If you want to preview the production build locally, you can run:
+```bash
+npm run preview
+```
+
+## Project Structure
+
+- `src/App.jsx`: The main entry point for the UI, containing the job data array and rendering the list.
+- `src/Component/Card.jsx`: A reusable UI component responsible for displaying individual job information.
+- `src/index.css`: Global styles for the application.
+- `package.json`: Contains project metadata, scripts, and dependencies.
